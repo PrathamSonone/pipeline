@@ -1,0 +1,64 @@
+Jan-28 06:45:49.548 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -resume
+Jan-28 06:45:51.153 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.10.3
+Jan-28 06:45:51.368 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/pratham_sonone/.nextflow/plugins; core-plugins: nf-amazon@3.4.3,nf-azure@1.20.2,nf-cloudcache@0.5.0,nf-codecommit@0.5.0,nf-console@1.3.0,nf-google@1.23.4,nf-k8s@1.2.2,nf-tower@1.17.4,nf-wave@1.16.1
+Jan-28 06:45:51.548 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jan-28 06:45:51.561 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jan-28 06:45:51.585 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Jan-28 06:45:51.783 [main] DEBUG nextflow.util.RetryConfig - Missing nextflow session - using default retry config
+Jan-28 06:45:52.536 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jan-28 06:45:53.008 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jan-28 06:45:53.013 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Jan-28 06:45:53.083 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/pratham_sonone/.nextflow/secrets/store.json
+Jan-28 06:45:53.153 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@58112bc4] - activable => nextflow.secret.LocalSecretsProvider@58112bc4
+Jan-28 06:45:53.269 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Jan-28 06:45:53.359 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [nostalgic_poincare] DSL2 - revision: e900fc3fc2
+Jan-28 06:45:53.689 [main] DEBUG nextflow.Session - Session UUID: 8fb67ad2-32f3-4ebc-a276-cb39f5a50170
+Jan-28 06:45:53.693 [main] DEBUG nextflow.Session - Run name: nostalgic_poincare
+Jan-28 06:45:53.698 [main] DEBUG nextflow.Session - Executor pool size: 4
+Jan-28 06:45:53.737 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Jan-28 06:45:53.778 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=12; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jan-28 06:45:53.905 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.10.3 build 10983
+  Created: 22-01-2026 15:34 UTC 
+  System: Linux 6.6.87.2-microsoft-standard-WSL2
+  Runtime: Groovy 4.0.28 on OpenJDK 64-Bit Server VM 17.0.17-internal+0-adhoc..src
+  Encoding: UTF-8 (UTF-8)
+  Process: 800@Pratham-Sonone [127.0.1.1]
+  CPUs: 4 - Mem: 2.8 GB (1.7 GB) - Swap: 1 GB (1 GB)
+Jan-28 06:45:54.126 [main] DEBUG nextflow.Session - Work-dir: /mnt/c/automated_pipeline_development/work [v9fs]
+Jan-28 06:45:54.130 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /mnt/c/automated_pipeline_development/bin
+Jan-28 06:45:54.178 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jan-28 06:45:54.257 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Jan-28 06:45:54.275 [main] DEBUG nextflow.Session - Observer factory (v2): DefaultObserverFactory
+Jan-28 06:45:54.505 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Jan-28 06:45:54.568 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 5; maxThreads: 1000
+Jan-28 06:45:55.129 [main] DEBUG nextflow.Session - Session start
+Jan-28 06:45:56.721 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jan-28 06:45:56.754 [main] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `reads` -- Initialise it to a default value eg. `params.reads = some_value`
+Jan-28 06:45:56.793 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_71596d435b335247: /mnt/c/automated_pipeline_development/main.nf
+Jan-28 06:45:56.797 [main] DEBUG nextflow.Session - Session aborted -- Cause: Missing `fromPath` parameter
+Jan-28 06:45:56.924 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
+Jan-28 06:45:57.024 [main] DEBUG nextflow.cli.Launcher - Operation aborted
+nextflow.exception.AbortOperationException: Missing `fromPath` parameter
+	at nextflow.Channel.fromPath(Channel.groovy:292)
+	at nextflow.Channel.fromPath(Channel.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.invokeStaticMethod(MetaClassImpl.java:1592)
+	at groovy.lang.DelegatingMetaClass.invokeStaticMethod(DelegatingMetaClass.java:173)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at Script_71596d435b335247.runScript(Script_71596d435b335247:2)
+	at nextflow.script.BaseScript.run0(BaseScript.groovy:218)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:260)
+	at nextflow.script.parser.v1.ScriptLoaderV1.runScript(ScriptLoaderV1.groovy:246)
+	at nextflow.script.parser.v1.ScriptLoaderV1.runScript(ScriptLoaderV1.groovy)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:246)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:139)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:429)
+	at nextflow.cli.Launcher.run(Launcher.groovy:515)
+	at nextflow.cli.Launcher.main(Launcher.groovy:675)
