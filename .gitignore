@@ -1,8 +1,13 @@
-.nextflow/
-work/
-.nextflow.log*
-*.swp
-pipeline/
-work/
+# Nextflow runtime files
 .nextflow*
+work/
+results/
 
+# Logs
+.nextflow.log*
+
+# Editor files
+*.swp
+
+# Accidental folders
+pipeline/
