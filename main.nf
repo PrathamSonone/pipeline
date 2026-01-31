@@ -1,18 +1,7 @@
-params.reads = 'data/sample.fastq.gz'
+#!/usr/bin/env nextflow
 
-include { FASTQC as FASTQC_RAW  } from './modules/fastqc.nf'
-include { CUTADAPT             } from './modules/cutadapt.nf'  
-include { FASTQC as FASTQC_TRIM } from './modules/fastqc.nf'
+include { MAIN_WORKFLOW } from './workflows/main_workflow.nf'
 
 workflow {
-    reads_ch = Channel.fromPath(params.reads)
-    
-    // 1. FASTQC on RAW reads
-    FASTQC_RAW(reads_ch)
-    
-    // 2. CUTADAPT trimming
-    trimmed_ch = CUTADAPT(reads_ch)
-    
-    // 3. FASTQC on TRIMMED reads  
-    FASTQC_TRIM(trimmed_ch)
+    MAIN_WORKFLOW()
 }
