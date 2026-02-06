@@ -1,5 +1,7 @@
 process SAMTOOLS_SORT {
 
+    tag "samtools_sort"
+
     input:
     path sam
 
@@ -11,3 +13,4 @@ process SAMTOOLS_SORT {
     ${params.samtools} sort -o sorted.bam $sam
     """
 }
+

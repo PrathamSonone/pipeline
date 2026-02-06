@@ -1,14 +1,17 @@
 process SAMTOOLS_INDEX {
 
+    tag "samtools_index"
+
     input:
     path bam
 
     output:
-    path "sorted.bam.bai"
+    path "*.bai"
 
     script:
     """
     ${params.samtools} index $bam
     """
 }
+
 
