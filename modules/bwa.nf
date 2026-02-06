@@ -11,7 +11,7 @@ process BWA_MEM {
 
     script:
     """
-    bwa mem ${refdir}/Homo_sapiens.GRCh38.dna.chromosome.22.fa ${reads} > ${sample_id}.sam
+    ${params.bwa} mem ${refdir}/Homo_sapiens.GRCh38.dna.chromosome.22.fa ${reads} > ${sample_id}.sam
     """
 }
 

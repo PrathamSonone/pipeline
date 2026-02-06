@@ -10,6 +10,6 @@ process CUTADAPT {
 
     script:
     """
-    cutadapt -a AGATCGGAAGAGC -o trimmed.fastq.gz $reads
+    ${params.cutadapt} -a AGATCGGAAGAGC -o trimmed.fastq.gz $reads
     """
 }
