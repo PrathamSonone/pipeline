@@ -2,6 +2,7 @@
 .nextflow*
 work/
 results/
+data/
 
 # Logs
 .nextflow.log*
